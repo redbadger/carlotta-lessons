@@ -17,11 +17,15 @@ describe("fizzBuzz", () => {
     expect(fizzBuzz(3)).toBe("fizz");
   });
 
-  it("should return 4 if I parse 4", () => {
+  it("should return 4 if I pass 4", () => {
     expect(fizzBuzz(4)).toBe(4);
   });
 
-  it("should return buzz if I parse 5", () => {
+  it("should return buzz if I pass 5", () => {
     expect(fizzBuzz(5)).toBe("buzz");
+  });
+  
+  it("should return fizz if I pass 6", () => {
+    expect(fizzBuzz(6)).toBe("fizz");
   });
 });
