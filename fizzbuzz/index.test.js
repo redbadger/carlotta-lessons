@@ -64,4 +64,8 @@ describe("fizzBuzz", () => {
   it("should return fizzbuzz if I pass 15", () => {
     expect(fizzBuzz(15)).toBe("fizzbuzz");
   });
+
+  it("should return 16 if I pass 16", () => {
+    expect(fizzBuzz(16)).toBe(16);
+  });
 });
