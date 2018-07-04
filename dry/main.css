@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+section {
+  border: 5px solid;
+  width: 75%;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.25rem 1rem;
+  -webkit-appearance: none;
+  border: 2px solid;
+}
