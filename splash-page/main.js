@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
       return response.json();
     });
 
-    var imageUrl = unplashResponse.urls.regular;
+    var imageUrl = unplashResponse.urls.raw;
     return renderImage(imageUrl);
   }
 
@@ -32,10 +32,52 @@ document.addEventListener("DOMContentLoaded", function() {
     return (canvas.style.backgroundImage = `url(${image})`);
   }
 
+  async function fetchWeather() {
+    const coordinates = await getCoordinates();
+    console.log(coordinates);
+  }
+
+  async function getCoordinates() {
+    await navigator.geolocation.getCurrentPosition(
+      function(position) {
+        return {
+          latitude: position.latitude,
+          latitude: position.latitude
+        };
+      },
+      function(error) {
+        console.error(error);
+        return undefined;
+      }
+    );
+  }
+
   function initiate() {
     setTime();
     fetchImage();
+    fetchWeather();
   }
 
   initiate();
 });
+
+// var options = {
+//   enableHighAccuracy: true,
+//   timeout: 5000,
+//   maximumAge: 0
+// };
+
+// function success(pos) {
+//   var crd = pos.coords;
+
+//   console.log('Your current position is:');
+//   console.log(`Latitude : ${crd.latitude}`);
+//   console.log(`Longitude: ${crd.longitude}`);
+//   console.log(`More or less ${crd.accuracy} meters.`);
+// }
+
+// function error(err) {
+//   console.warn(`ERROR(${err.code}): ${err.message}`);
+// }
+
+// navigator.geolocation.getCurrentPosition(success, error, options);
