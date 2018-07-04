@@ -1,8 +1,8 @@
 //Elements
 var canvas = document.getElementById("canvas");
-var buttonRed = document.getElementById("button-red");
-var buttonBlue = document.getElementById("button-blue");
-var buttonYellow = document.getElementById("button-yellow");
+// var buttonRed = document.getElementById("button-red");
+// var buttonBlue = document.getElementById("button-blue");
+// var buttonYellow = document.getElementById("button-yellow");
 
 var buttons = document.getElementsByClassName("js-button");
 

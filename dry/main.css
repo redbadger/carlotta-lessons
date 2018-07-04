@@ -13,3 +13,16 @@ button {
   -webkit-appearance: none;
   border: 2px solid;
 }
+
+.color-box {
+  width: 100px;
+  height: 100px;
+}
+
+.box {
+  background-color: red;
+}
+
+div {
+  background-color: blue;
+}
