@@ -20,4 +20,26 @@ section {
 p {
   align-self: center;
   font-size: 8rem;
+  color: white;
+}
+
+.counter {
+  animation: pulse 1s linear infinite;
+}
+
+.canvas {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: grey;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
