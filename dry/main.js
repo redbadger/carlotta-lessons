@@ -8,17 +8,23 @@ var buttons = document.getElementsByClassName("js-button");
 
 // Events
 for (i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", paintRefactored);
+  buttons[i].addEventListener("click", addClass);
 }
 
 //Execution
-function paintRefactored(event) {
-  var color = event.path[0].innerText;
-  paint(color);
-}
+// function paintRefactored(event) {
+//   var color = event.path[0].innerText;
+//   paint(color);
+// }
 
-function paint(color) {
-  return (canvas.style.backgroundColor = color);
+// function paint(color) {
+//   return (canvas.style.backgroundColor = color);
+// }
+
+function addClass(event) {
+  var color = event.path[0].innerText;
+  canvas.classList = "";
+  canvas.classList.add(color);
 }
 
 // The following is the "WET code"
