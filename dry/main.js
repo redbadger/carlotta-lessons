@@ -1,3 +1,11 @@
+//Elements
 var buttonRed = document.getElementById("button-red");
+var canvas = document.getElementById("canvas");
 
-buttonRed.addEventListener("click", () => {});
+//Events
+buttonRed.addEventListener("click", paintRed);
+
+//Executions
+function paintRed() {
+  return (canvas.style.backgroundColor = "red");
+}
