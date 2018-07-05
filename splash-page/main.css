@@ -21,3 +21,17 @@ p {
   align-self: center;
   font-size: 8rem;
 }
+
+.pulse {
+  animation: flash linear 1s;
+}
+
+@keyframes flash {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
