@@ -17,9 +17,22 @@ section {
   align-content: center;
 }
 
-p {
+article {
   align-self: center;
+  color: white;
+  text-align: center;
+}
+
+h1 {
   font-size: 8rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+p {
+  font-size: 4rem;
 }
 
 .pulse {
