@@ -23,7 +23,7 @@ p {
 }
 
 .pulse {
-  animation: flash linear 1s;
+  animation: flash linear 1s infinite;
 }
 
 @keyframes flash {
@@ -34,4 +34,9 @@ p {
   to {
     opacity: 1;
   }
+}
+
+.canvas {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
