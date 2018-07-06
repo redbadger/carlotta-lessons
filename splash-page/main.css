@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Oxygen", sans-serif;
+}
+
+section {
+  border: 2px solid;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+article {
+  align-self: center;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+p {
+  font-size: 4rem;
+}
+
+.pulse {
+  animation: flash linear 1s infinite;
+}
+
+@keyframes flash {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.canvas {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
