@@ -5,6 +5,7 @@ var UNPLASH_URL = `https://api.unsplash.com/photos/random?client_id=${UNPLASH_KE
 var OPEN_WEATHER_KEY = "APPID=73569faac5db27b0af875a40440fa6bf";
 var WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?${OPEN_WEATHER_KEY}`;
 
+console.log('Hello world')
 document.addEventListener("DOMContentLoaded", function(){
     var hours = document.getElementById('js-hours');
     var mins = document.getElementById('js-minutes');
@@ -25,21 +26,22 @@ document.addEventListener("DOMContentLoaded", function(){
     async function fetchImage() {
         var unplashResponse = await fetch(UNPLASH_URL).then(function(response){
             return response.json()
-        
-        
         })
         
         var imageUrl = unplashResponse.urls.raw;
         renderImage(imageUrl)
     }
+    
     function renderImage(imageUrl) {
         canvas.style.backgroundImage = `url(${imageUrl})`;
     }
+    
     
     function getWeatherUrl(lat, lon) {
         return `${WEATHER_URL}&lat=${lat}&lon=${lon}`;
     }
 
+    
     function renderWeather(weather, place) {
         placeContainer.innerText = place;
         weatherContainer.innerText = weather;
@@ -53,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
             var url = getWeatherUrl(lat, lon);
 
         });
-        var weatherResponse = await fetch(url).then(function(response(){
+        var weatherResponse = await fetch(url).then(function(response){
             return response.json()
         
         });
@@ -62,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function(){
         renderWeather(weather, place)
     }
 
-    renderWeather()
+    getLocation()
     fetchImage()
     setTime()
 });
