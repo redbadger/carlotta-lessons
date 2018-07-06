@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function setTime() {
         renderTime();
-        setInterval(renderTime(), 100);
+        setInterval(renderTime, 1000);
     }
 
     async function fetchImage() {
