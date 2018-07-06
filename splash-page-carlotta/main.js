@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function(){
     var hours = document.getElementById('js-hours');
     var mins = document.getElementById('js-minutes');
     var canvas = document.getElementById('js-canvas');
+    var weatherContainer = document.getElementById('js-weather');
+    var placeContainer = document.getElementById('js-place');
 
     function renderTime() {
         hours.innerText = new Date().getHours();
@@ -34,6 +36,33 @@ document.addEventListener("DOMContentLoaded", function(){
         canvas.style.backgroundImage = `url(${imageUrl})`;
     }
     
+    function getWeatherUrl(lat, lon) {
+        return `${WEATHER_URL}&lat=${lat}&lon=${lon}`;
+    }
+
+    function renderWeather(weather, place) {
+        placeContainer.innerText = place;
+        weatherContainer.innerText = weather;
+    }
+
+    async function getLocation() {
+        location = navigator.geolocation.getCurrentPosition(async function(position){
+            var lat = location.latitude;
+            var lon = location.longitude;
+
+            var url = getWeatherUrl(lat, lon);
+
+        });
+        var weatherResponse = await fetch(url).then(function(response(){
+            return response.json()
+        
+        });
+        var weather = weatherResponse.weather[0].main;
+        var place = weatherResponse.name;
+        renderWeather(weather, place)
+    }
+
+    renderWeather()
     fetchImage()
     setTime()
 });
