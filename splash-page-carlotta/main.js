@@ -8,6 +8,7 @@ var WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?${OPEN_WEATHE
 document.addEventListener("DOMContentLoaded", function(){
     var hours = document.getElementById('js-hours');
     var mins = document.getElementById('js-minutes');
+    var canvas = document.getElementById('js-canvas');
 
     function renderTime() {
         hours.innerText = new Date().getHours();
@@ -19,7 +20,21 @@ document.addEventListener("DOMContentLoaded", function(){
         setInterval(renderTime(), 1000);
     }
 
-   
+    async function fetchImage() {
+        var unplashResponse = await fetch(UNPLASH_URL).then(function(response){
+            return response.json()
+        
+        
+        })
+        
+        var imageUrl = unplashResponse.urls.raw;
+        renderImage(imageUrl)
+    }
+    function renderImage(imageUrl) {
+        canvas.style.backgroundImage = `url(${imageUrl})`;
+    }
+    
+    fetchImage()
     setTime()
 });
 
