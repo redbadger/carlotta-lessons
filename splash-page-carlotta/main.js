@@ -5,7 +5,6 @@ var UNPLASH_URL = `https://api.unsplash.com/photos/random?client_id=${UNPLASH_KE
 var OPEN_WEATHER_KEY = "APPID=73569faac5db27b0af875a40440fa6bf";
 var WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?${OPEN_WEATHER_KEY}`;
 
-console.log('Hello world')
 document.addEventListener("DOMContentLoaded", function(){
     var hours = document.getElementById('js-hours');
     var mins = document.getElementById('js-minutes');
@@ -20,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function setTime() {
         renderTime();
-        setInterval(renderTime(), 1000);
+        setInterval(renderTime(), 100);
     }
 
     async function fetchImage() {
@@ -45,24 +44,27 @@ document.addEventListener("DOMContentLoaded", function(){
     function renderWeather(weather, place) {
         placeContainer.innerText = place;
         weatherContainer.innerText = weather;
+        weatherContainer.classList.remove('pulse');
+        placeContainer.classList.remove('pulse');
     }
 
     async function getLocation() {
-        location = navigator.geolocation.getCurrentPosition(async function(position){
-            var lat = location.latitude;
-            var lon = location.longitude;
-
-            var url = getWeatherUrl(lat, lon);
-
+        navigator.geolocation.getCurrentPosition(async function(position) {
+          var lat = position.coords.latitude;
+          var lon = position.coords.longitude;
+    
+          var url = getWeatherUrl(lat, lon);
+    
+          var weatherResponse = await fetch(url).then(function(response) {
+            return response.json();
+          });
+    
+          var weather = weatherResponse.weather[0].main;
+          var place = weatherResponse.name;
+    
+          renderWeather(weather, place);
         });
-        var weatherResponse = await fetch(url).then(function(response){
-            return response.json()
-        
-        });
-        var weather = weatherResponse.weather[0].main;
-        var place = weatherResponse.name;
-        renderWeather(weather, place)
-    }
+      }
 
     getLocation()
     fetchImage()
