@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Orbitron', sans-serif;
     margin: 0; 
 }
 
@@ -55,3 +55,21 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* fonts :
+font-family: 'Indie Flower', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Amatic SC', cursive;
+font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'BioRhyme Expanded', serif;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'VT323', monospace;
+font-family: 'Reenie Beanie', cursive; */
