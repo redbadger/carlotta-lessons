@@ -1,0 +1,48 @@
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    margin: 0; 
+}
+
+section {
+    border: 2px solid;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+article {
+    align-self: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 8rem;
+  }
+  
+  h2 {
+    font-size: 6rem;
+  }
+
+  p {
+    font-size: 4rem;
+  }
+
+  .pulse { 
+      animation: flash 1s linear infinite;
+  }
+
+  @keyframes flash {
+      from{
+          opacity: 1;
+      }
+      to {
+          opacity: 0;
+      }
+  }
