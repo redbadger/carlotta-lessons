@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function renderTime() {
         hours.innerText = new Date().getHours();
-        mins.innerText = new Date().getMinutes(); 
+        mins.innerText = new Date().getMinutes();
+        if (String(mins.innerText).length === 1) {
+            mins.innerText = `0${new Date().getMinutes()}`
+        }
     }
 
     function setTime() {
