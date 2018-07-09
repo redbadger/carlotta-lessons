@@ -2,6 +2,7 @@ const gridItems = document.querySelectorAll(".js-board-item");
 let currentPlayer = "x";
 let board = [null, null, null, null, null, null, null, null, null];
 const winnerBoard = document.getElementById("js-winner-board");
+const winnerPlayer = document.getElementById("js-winner-player");
 const ANSWERS = [
   [0, 1, 2],
   [3, 4, 5],
@@ -40,8 +41,11 @@ const checkWin = player => {
 };
 
 const checkWinner = player => {
+  console.log(player);
+
   const winner = checkWin(player);
   if (winner) {
+    winnerPlayer.innerText = player;
     winnerBoard.classList.remove("winner-board");
   }
 };
