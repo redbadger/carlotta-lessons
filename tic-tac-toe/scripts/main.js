@@ -3,6 +3,7 @@ let currentPlayer = "x";
 let board = [null, null, null, null, null, null, null, null, null];
 const winnerBoard = document.getElementById("js-winner-board");
 const winnerPlayer = document.getElementById("js-winner-player");
+const clearButton = document.getElementById("js-clear-button");
 const ANSWERS = [
   [0, 1, 2],
   [3, 4, 5],
@@ -41,8 +42,6 @@ const checkWin = player => {
 };
 
 const checkWinner = player => {
-  console.log(player);
-
   const winner = checkWin(player);
   if (winner) {
     winnerPlayer.innerText = player;
@@ -61,3 +60,16 @@ const handleGridItemClick = event => {
 gridItems.forEach(gridItem => {
   gridItem.addEventListener("click", handleGridItemClick);
 });
+
+const clearHtmlBoard = () => {
+  gridItems.forEach(gridItem => {
+    gridItem.innerText = "";
+  });
+};
+
+const clearBoard = () => {
+  board = [null, null, null, null, null, null, null, null, null];
+  clearHtmlBoard();
+};
+
+clearButton.addEventListener("click", clearBoard);
