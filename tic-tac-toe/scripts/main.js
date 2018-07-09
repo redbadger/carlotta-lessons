@@ -16,6 +16,10 @@ const togglePlayer = player => {
   player === "x" ? (currentPlayer = "o") : (currentPlayer = "x");
 };
 
+const removeEventListener = element => {
+  element.removeEventListener("click", handleGridItemClick);
+};
+
 const renderCurrrentPlayer = element => {
   const text = document.createTextNode(currentPlayer);
   element.appendChild(text);
@@ -25,6 +29,7 @@ const renderCurrrentPlayer = element => {
 const handleGridItemClick = event => {
   const position = event.target.dataset.cell;
   renderCurrrentPlayer(event.target);
+  removeEventListener(event.target);
 };
 
 gridItems.forEach(gridItem => {
