@@ -1,1 +1,4 @@
-exports.arnieQuotes = require("./arnie-quotes.js");
+require("./arnie-quotes");
+require("./yoda-quotes");
+require("./xkcd");
+require("./weather");
