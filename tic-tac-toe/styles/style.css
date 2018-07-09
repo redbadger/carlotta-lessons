@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.board-item {
+  width: 33%;
+  height: 12.5vh;
+}
+
+.board-item:nth-of-type(2),
+.board-item:nth-of-type(3),
+.board-item:nth-of-type(5),
+.board-item:nth-of-type(6),
+.board-item:nth-of-type(8),
+.board-item:nth-of-type(9) {
+  border-left: 1px solid;
+}
+
+.board-item:nth-of-type(4),
+.board-item:nth-of-type(5),
+.board-item:nth-of-type(6) {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.winner-board {
+  display: none;
+}
