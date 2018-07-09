@@ -1,6 +1,17 @@
 * {
   box-sizing: border-box;
 }
+.container {
+  display: flex;
+  justify-content: center;
+}
+.main-content {
+  background-color: aqua;
+  width: 75%;
+  align-self: center;
+  justify-content: center;
+  
+}
 
 ul {
   margin: 0;
@@ -12,28 +23,26 @@ ul {
   text-align: center;
   align-self:center;
 
-  width: 60%;
+  width: 42%;
 }
 
 .board-item {
   width: 33%;
-  height: 12.5vh;
+  height: 15vh;
 }
 
 .board-item:nth-of-type(2),
-.board-item:nth-of-type(3),
 .board-item:nth-of-type(5),
-.board-item:nth-of-type(6),
-.board-item:nth-of-type(8),
-.board-item:nth-of-type(9) {
-  border-left: 1px solid;
+.board-item:nth-of-type(8) {
+  border-left: 3px solid;
+  border-right: 3px solid;
 }
 
 .board-item:nth-of-type(4),
 .board-item:nth-of-type(5),
 .board-item:nth-of-type(6) {
-  border-top: 1px solid;
-  border-bottom: 1px solid;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
 }
 
 .winner-board {
@@ -45,13 +54,28 @@ li {
   justify-content: center;
   align-items: center;
 }
-
-section, 
+.main-game {
+  padding: 1%;
+  padding-bottom: 5%
+}
+.main-game, 
 aside {
   text-align: center;
-  font-size: 4rem;
+  font-size: 6rem;
   font-family: 'Gaegu', cursive;
   display: flex;
   justify-content: center;
   align-content: center;
+  padding-bottom: 0;
+}
+
+h1 {
+  font-family: 'Wendy One', sans-serif;
+  font-size: 7rem;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 5rem;
 }

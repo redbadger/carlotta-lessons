@@ -45,6 +45,9 @@ const checkWinner = player => {
   const winner = checkWin(player);
   if (winner) {
     winnerPlayer.innerText = `${player} wins!`;
+    gridItems.forEach(gridItem => {
+      gridItem.removeEventListener("click", handleGridItemClick);
+    });
     winnerBoard.classList.remove("winner-board");
   }
 };
