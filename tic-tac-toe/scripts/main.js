@@ -44,7 +44,7 @@ const checkWin = player => {
 const checkWinner = player => {
   const winner = checkWin(player);
   if (winner) {
-    winnerPlayer.innerText = player;
+    winnerPlayer.innerText = `${player} wins!`;
     winnerBoard.classList.remove("winner-board");
   }
 };
@@ -71,6 +71,11 @@ const clearBoard = () => {
   board = [null, null, null, null, null, null, null, null, null];
   clearHtmlBoard();
   currentPlayer = "x";
+  gridItems.forEach(gridItem => {
+    gridItem.addEventListener("click", handleGridItemClick);
+  });
+  winnerBoard.classList.add('winner-board');
+
 };
 
 clearButton.addEventListener("click", clearBoard);

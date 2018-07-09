@@ -8,7 +8,11 @@ ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-self:center;
+
+  width: 60%;
 }
 
 .board-item {
@@ -34,4 +38,20 @@ ul {
 
 .winner-board {
   display: none;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section, 
+aside {
+  text-align: center;
+  font-size: 4rem;
+  font-family: 'Gaegu', cursive;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
