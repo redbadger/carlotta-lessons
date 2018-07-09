@@ -70,6 +70,7 @@ const clearHtmlBoard = () => {
 const clearBoard = () => {
   board = [null, null, null, null, null, null, null, null, null];
   clearHtmlBoard();
+  currentPlayer = "x";
 };
 
 clearButton.addEventListener("click", clearBoard);
