@@ -77,7 +77,8 @@ const clearBoard = () => {
   gridItems.forEach(gridItem => {
     gridItem.addEventListener("click", handleGridItemClick);
   });
-  winnerBoard.classList.add('winner-board');
+  winnerPlayer.innerText = ''
+
 
 };
 
