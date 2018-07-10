@@ -98,8 +98,13 @@ button {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
+  margin-bottom: 0;
 }
 
 button:hover {
   background-color: white;
+}
+
+.winner-board {
+  margin-top: 0;
 }
