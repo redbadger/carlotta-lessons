@@ -17,7 +17,7 @@ Open a terminal tab and run `npm run tunnel`, and it will return the following
 
     $~ your url is: http://<random address>.localtunnel.me
 
-In a browser tab go to the Danny app configuration page and then in [Interactive Messages](https://api.slack.com/apps/A2FT41M0C/interactive-messages)
+In a browser tab go to the Danny app configuration page and then in [Interactive Messages](https://api.slack.com/apps/ABLHMACJC/interactive-messages?)
 
 change interactive message URL to the random address that tunnel script provide you:
 
@@ -56,3 +56,9 @@ Bring a Arnold Schwarzenegger Yoda quote
 Bring a random XKCD cartoon
 
 `xkcd`
+
+### Pokemon
+
+Return Pokemon data from [pokéapi](https://pokeapi.co/)
+
+`pokemon` + pokemon name
