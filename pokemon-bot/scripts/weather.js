@@ -13,7 +13,6 @@ module.exports = controller.hears("weather (.*)", "ambient", (bot, msg) => {
   };
 
   let location = msg.match[1];
-  console.log(location);
   options.qs.q = location;
   request(options, (error, response, body) => {
     if (error) throw new Error(error);
