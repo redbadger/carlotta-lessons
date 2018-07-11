@@ -20,9 +20,10 @@ module.exports = controller.hears("machine", "ambient", async (bot, msg) => {
         const { item, move, version_group } = pokemonResponse;
 
         const games = version_group.name.replace(/-/g, ", ");
+        const moveName = move.name.replace(/-/g, " ");
 
         const messageString = `*Machine number:* ${item.name}\n*Move:* ${
-          move.name
+          moveName
         }\n*Games:* ${games}`;
 
         return bot.reply(msg, messageString);
