@@ -29,6 +29,7 @@ This is a sample Slack Button application that adds a bot to one or many slack t
 // *****************************************************************************
 const Botkit = require("botkit");
 const request = require("request");
+require("dotenv").config();
 
 // *****************************************************************************
 // Slack handshake
@@ -39,8 +40,8 @@ const controller = Botkit.slackbot({
   interactive_replies: true,
   debug: true
 }).configureSlackApp({
-  clientId: "2348032665.394599352624",
-  clientSecret: "c20b4a773cedaf54de83c9d8351e0e35",
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
   scopes: ["bot"]
 });
 
