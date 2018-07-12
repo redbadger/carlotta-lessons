@@ -8,7 +8,7 @@ body{
 .container {
   display: flex;
   justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cdff4c62302fd44491d4850202323d11&auto=format&fit=crop&w=800&q=60');
+  background-image: url('https://images.unsplash.com/photo-1516053256215-94022213b13c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=703a399feb6c6139d4e355122c0ef2cc&auto=format&fit=crop&w=800&q=60');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -78,7 +78,7 @@ aside {
 h1 {
   font-family: 'Wendy One', sans-serif;
   font-size: 7rem;
-  text-align: center;
+  text-align: center; 
 }
 
 h2 {
@@ -106,6 +106,6 @@ button:hover {
   border: goldenrod 2px solid;
 }
 
-.winner-board {
+.winner-player {
   margin-top: 0;
 }
