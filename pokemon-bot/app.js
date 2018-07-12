@@ -40,7 +40,7 @@ const controller = Botkit.slackbot({
   debug: true
 }).configureSlackApp({
   clientId: "2348032665.394599352624",
-  clientSecret: "53b0bbd2f54f669041f23b1f8e6909d4",
+  clientSecret: "c20b4a773cedaf54de83c9d8351e0e35",
   scopes: ["bot"]
 });
 
